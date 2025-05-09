@@ -1,9 +1,8 @@
-/* Evita scroll horizontal */
+
 html, body {
   overflow-x: hidden;
 }
 
-/* Tablets e pequenos desktops (≤1200px) */
 @media (max-width: 1200px) {
   .header-inner {
     flex-wrap: wrap;
@@ -36,9 +35,7 @@ html, body {
   }
 }
 
-/* Mobile (≤768px) */
 @media (max-width: 768px) {
-  /* Header vira referência pro absolute */
   header.site-header {
     position: relative;
   }
@@ -56,17 +53,11 @@ html, body {
     min-width: 100%;
   }
 
-  /* Ícones sempre clicáveis */
-  #hambButton {
-    display: inline-block;
-    cursor: pointer;
-  }
+  #hambButton,
   #closeButton {
-    display: none;
     cursor: pointer;
   }
 
-  /* Menu escondido até abrir */
   nav.main-nav {
     display: none;
     position: absolute;
@@ -77,11 +68,11 @@ html, body {
     z-index: 10;
     flex-direction: column;
   }
+
   nav.main-nav.open {
     display: flex;
   }
 
-  /* Itens do menu em coluna */
   nav.main-nav ul {
     list-style: none;
     margin: 0;
@@ -100,7 +91,6 @@ html, body {
   }
 }
 
-/* Desktop (≥769px) */
 @media (min-width: 769px) {
   #hambButton,
   #closeButton {
@@ -122,6 +112,7 @@ html, body {
   nav.main-nav li {
     border: none;
     width: auto;
+    padding: 0;
     margin: 0;
   }
   nav.main-nav a {
@@ -130,7 +121,6 @@ html, body {
   }
 }
 
-/* Extra-small (≤480px): cards full-width */
 @media (max-width: 480px) {
   .certificate-section .card {
     flex: 1 1 100%;

@@ -1,4 +1,4 @@
-:root{
+:root {
     --heading-font: "Oswald", sans-serif;
     --text-font: "Noto Sans", sans-serif;
 
@@ -10,7 +10,7 @@
     --color6: #000;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -19,17 +19,16 @@
 }
 
 div.header-inner {
-  position: relative;                /* referência para o wrapper absoluto */
+  position: relative;
   display: flex;
-  justify-content: space-between;    /* foto à esquerda, título no centro, ícones à direita */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--color1);
-  /* remova o gap aqui ou deixe um valor pequeno, pois o space-between já afasta */
   gap: 1rem;
 }
 
-h1.site-title{
+h1.site-title {
     font-family: var(--heading-font);
     font-size: 3rem;
     font-weight: 700;
@@ -37,16 +36,16 @@ h1.site-title{
     text-decoration: underline;
 }
 
-img.profile-pic{
+img.profile-pic {
     width: 10rem;
     height: 10rem;
     border-radius: 10px;
     box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.60),   
+        0 4px 8px rgba(0, 0, 0, 0.60),
         0 12px 24px rgba(0, 0, 0, 0.50);
 }
 
-nav.main-nav{
+nav.main-nav {
     font-size: 1.5rem;
     font-weight: 600;
     background-color: var(--color2);
@@ -55,7 +54,7 @@ nav.main-nav{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.60), 0 12px 24px rgba(0, 0, 0, 0.50);
 }
 
-nav.main-nav ul{
+nav.main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -65,14 +64,14 @@ nav.main-nav ul{
     gap: 2rem;
 }
 
-nav.main-nav a{
+nav.main-nav a {
     color: var(--color5);
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
 }
 
-nav.main-nav a:hover{
+nav.main-nav a:hover {
     background-color: var(--color3);
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
@@ -97,7 +96,7 @@ nav.main-nav a:hover{
 }
 
 .home-section .panel {
-  flex: 1;                      
+  flex: 1;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -181,7 +180,7 @@ nav.main-nav a:hover{
 }
 
 .certificate-section .card {
-  flex: 1 1 30%;       
+  flex: 1 1 30%;
   max-width: 200px;
   background: var(--color2);
   color: var(--color5);
@@ -194,7 +193,7 @@ nav.main-nav a:hover{
 }
 
 .site-footer {
-  background-color: var(--color2); 
+  background-color: var(--color2);
   color: #fff;
   padding: 1rem 0;
 }
@@ -233,7 +232,6 @@ nav.main-nav a:hover{
   height: 2.5rem;
 }
 
-/* ícones ocupam todo o wrapper */
 .icon-wrapper img {
   position: absolute;
   width: 100%;
@@ -242,10 +240,10 @@ nav.main-nav a:hover{
   left: 0;
 }
 
-img.hambHidden{
+img.hambHidden {
     visibility: hidden !important;
 }
 
-img.closeHidden{
+img.closeHidden {
     visibility: hidden !important;
 }
