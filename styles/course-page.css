@@ -84,7 +84,7 @@ nav.main-nav a:hover {
   box-sizing: border-box;
 }
 
-.home-section h2 {
+.main-content h1 {
   font-size: 1.8rem;
   color: var(--color2);
   margin-bottom: 1rem;
