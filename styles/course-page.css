@@ -18,14 +18,15 @@
     font-size: 1rem;
 }
 
-div.header-inner{
-    background-color: var(--color1);
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem 2rem;
+div.header-inner {
+  position: relative;                /* referência para o wrapper absoluto */
+  display: flex;
+  justify-content: space-between;    /* foto à esquerda, título no centro, ícones à direita */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color1);
+  /* remova o gap aqui ou deixe um valor pequeno, pois o space-between já afasta */
+  gap: 1rem;
 }
 
 h1.site-title{
@@ -242,9 +243,9 @@ nav.main-nav a:hover{
 }
 
 img.hambHidden{
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
 img.closeHidden{
-    visibility: hidden;
+    visibility: hidden !important;
 }

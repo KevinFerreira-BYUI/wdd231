@@ -1,9 +1,9 @@
-/* Evita scroll lateral */
+/* Evita scroll horizontal */
 html, body {
   overflow-x: hidden;
 }
 
-/* ===== Responsivo até 1200px ===== */
+/* Tablets e pequenos desktops (≤1200px) */
 @media (max-width: 1200px) {
   .header-inner {
     flex-wrap: wrap;
@@ -36,14 +36,13 @@ html, body {
   }
 }
 
-/* ===== Mobile até 768px ===== */
+/* Mobile (≤768px) */
 @media (max-width: 768px) {
-  /* Cabeçalho vira referência pro absolute do nav */
+  /* Header vira referência pro absolute */
   header.site-header {
     position: relative;
   }
 
-  /* Título e foto menores */
   h1.site-title {
     font-size: 2rem;
   }
@@ -52,15 +51,18 @@ html, body {
     height: 8rem;
   }
 
-  /* Painéis full-width */
   .home-section .panel {
     flex: 1 1 100%;
     min-width: 100%;
   }
 
-  /* Ícones sempre clicáveis (sem display aqui) */
-  #hambButton,
+  /* Ícones sempre clicáveis */
+  #hambButton {
+    display: inline-block;
+    cursor: pointer;
+  }
   #closeButton {
+    display: none;
     cursor: pointer;
   }
 
@@ -75,12 +77,11 @@ html, body {
     z-index: 10;
     flex-direction: column;
   }
-  /* Quando abrir (JS adiciona .open) */
   nav.main-nav.open {
     display: flex;
   }
 
-  /* Lista em coluna */
+  /* Itens do menu em coluna */
   nav.main-nav ul {
     list-style: none;
     margin: 0;
@@ -99,15 +100,13 @@ html, body {
   }
 }
 
-/* ===== Desktop a partir de 769px ===== */
+/* Desktop (≥769px) */
 @media (min-width: 769px) {
-  /* Esconde ambos os ícones */
   #hambButton,
   #closeButton {
     display: none !important;
   }
 
-  /* Menu volta ao normal */
   nav.main-nav {
     display: flex !important;
     position: static;
@@ -123,7 +122,6 @@ html, body {
   nav.main-nav li {
     border: none;
     width: auto;
-    padding: 0;
     margin: 0;
   }
   nav.main-nav a {
@@ -132,7 +130,7 @@ html, body {
   }
 }
 
-/* ===== Extra-small (≤480px): cards full-width ===== */
+/* Extra-small (≤480px): cards full-width */
 @media (max-width: 480px) {
   .certificate-section .card {
     flex: 1 1 100%;
