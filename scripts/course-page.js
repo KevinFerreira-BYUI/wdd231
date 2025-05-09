@@ -117,13 +117,13 @@
         });
 
         btnAll.addEventListener("click", () => {
-            cards.forEach((card) => {
+            cards.forEach(card => {
                 card.style.display = "block";
             });
         });
 
         btnCse.addEventListener("click", () => {
-            cards.forEach((card) => {
+            cards.forEach(card => {
                 if (card.getAttribute("data-category") === "CSE"){
                     card.style.display = "block";
                 } else{
@@ -131,14 +131,14 @@
                 }
             });
         });
-
-        btnWdd.addEventListener("click", function() {
-            cards.forEach(function(card) {
-                if (card.getAttribute("data-category") === "WDD") {
+        
+        btnWdd.addEventListener("click", () => {
+            cards.forEach(card => {
+                if (card.getAttribute("data-category") === "WDD"){
                     card.style.display = "block";
-                } else {
+                } else{
                     card.style.display = "none";
-                }   
+                }
             });
-         });
+        });
     });
