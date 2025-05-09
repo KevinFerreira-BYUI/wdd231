@@ -1,0 +1,141 @@
+/* Evita scroll lateral */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===== Responsivo até 1200px ===== */
+@media (max-width: 1200px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  nav.main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .home-section .panels {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .home-section .panel {
+    flex: 1 1 300px;
+    min-width: 300px;
+  }
+
+  .certificate-section .certificate-cards {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .certificate-section .card {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+}
+
+/* ===== Mobile até 768px ===== */
+@media (max-width: 768px) {
+  /* Cabeçalho vira referência pro absolute do nav */
+  header.site-header {
+    position: relative;
+  }
+
+  /* Título e foto menores */
+  h1.site-title {
+    font-size: 2rem;
+  }
+  img.profile-pic {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  /* Painéis full-width */
+  .home-section .panel {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  /* Ícones sempre clicáveis (sem display aqui) */
+  #hambButton,
+  #closeButton {
+    cursor: pointer;
+  }
+
+  /* Menu escondido até abrir */
+  nav.main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color2);
+    z-index: 10;
+    flex-direction: column;
+  }
+  /* Quando abrir (JS adiciona .open) */
+  nav.main-nav.open {
+    display: flex;
+  }
+
+  /* Lista em coluna */
+  nav.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav.main-nav li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0;
+  }
+  nav.main-nav a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--color5);
+    text-decoration: none;
+  }
+}
+
+/* ===== Desktop a partir de 769px ===== */
+@media (min-width: 769px) {
+  /* Esconde ambos os ícones */
+  #hambButton,
+  #closeButton {
+    display: none !important;
+  }
+
+  /* Menu volta ao normal */
+  nav.main-nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+  }
+  nav.main-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  nav.main-nav li {
+    border: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  nav.main-nav a {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== Extra-small (≤480px): cards full-width ===== */
+@media (max-width: 480px) {
+  .certificate-section .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

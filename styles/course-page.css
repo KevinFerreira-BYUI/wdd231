@@ -21,17 +21,18 @@
 div.header-inner{
     background-color: var(--color1);
     display: flex;
-    justify-content: center;
+    position: relative;
+    justify-content: space-between;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     padding: 1rem 2rem;
 }
 
 h1.site-title{
     font-family: var(--heading-font);
     font-size: 3rem;
-    font-weight: 600;
-    color: var(--color6);
+    font-weight: 700;
+    color: var(--color2);
     text-decoration: underline;
 }
 
@@ -221,4 +222,29 @@ nav.main-nav a:hover{
   position: relative;
     top: 0.5rem;
     left: 0.5rem;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* ícones ocupam todo o wrapper */
+.icon-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+img.hambHidden{
+    visibility: hidden;
+}
+
+img.closeHidden{
+    visibility: hidden;
 }
