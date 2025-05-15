@@ -19,12 +19,17 @@
     font-family: var(--text-font);
 }
 
+body{
+    background-color: var(--color3);
+}
+
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--color1);
     padding: 10px 20px;
+    box-shadow: 0 30px 25px rgba(0, 0, 0, 0.3);
 }
 
 .logo-section {
@@ -41,12 +46,13 @@
 
 .title h1 {
     font-family: var(--heading-font);
-    font-size: 18px;
+    font-size: 1.1rem;
     color: var(--color5);
 }
 
 .title p {
-  font-size: 12px;
+  font-size: 0.9rem;
+  font-style: italic;
   color: var(--color5);
   margin-top: -4px;
 }
@@ -73,3 +79,46 @@
   color: #FFD60A;
 }
 
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+div.article-heading{
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: var(--color6);
+  margin: 80px auto 0 auto;
+  padding: 30px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+footer{
+    box-shadow: 0 -30px 25px rgba(0, 0, 0, 0.3);
+    background-color: var(--color1);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+}
+
+.socialMedias a{
+  padding: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.socialMedias img{
+  width: 40px;
+  height: auto;
+}

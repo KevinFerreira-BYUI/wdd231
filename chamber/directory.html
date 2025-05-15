@@ -10,53 +10,66 @@
         <meta property="og:image" content="https://tribunadejundiai.com.br/wp-content/uploads/2020/02/WhatsApp-Image-2020-02-26-at-2.01.png">
         <meta property="og:url" content="https://kevinferreira-byui.github.io/wdd231/chamber">
         <link rel="icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="styles/directory.css">
-        <link rel="stylesheet" href="styles/directory-mobile.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/style-mobile.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Directory | Vinhedo Chamber of Commerce</title>
     </head>
     <body>
-        <header class="navbar">
-            <div class="logo-section">
-                <img src="images/vinhedo-portal.webp" class="logo" alt="portal of vinhedo" width="300" height="250" loading="lazy">
-                <div class="title">
-                    <h1>Vinhedo</h1>
-                    <p>Chamber of Commerce</p>
+        <div class="wrapper">
+            <header class="navbar">
+                <div class="logo-section">
+                    <img src="images/vinhedo-portal.webp" class="logo" alt="portal of vinhedo" width="300" height="250" loading="lazy">
+                    <div class="title">
+                        <h1>Vinhedo</h1>
+                        <p>Chamber of Commerce</p>
+                    </div>
                 </div>
-            </div>
 
-            <nav class="menu">
-                <a href="#">Home</a>
-                <a href="#">Directory</a>
-                <a href="#">Join</a>
-                <a href="#">Discover</a>
-            </nav>
-        </header>
-        <main>
-            <article class="grid">
+                <nav class="menu">
+                    <a href="#">Home</a>
+                    <a href="#">Directory</a>
+                    <a href="#">Join</a>
+                    <a href="#">Discover</a>
+                </nav>
+            </header>
+            <main>
+                <article class="grid">
+                    <div class="article-heading">
+                        <h1>Members of our chamber</h1>
+                    </div>
+                    
+                </article>
+            </main>
+            <footer class="footer">
+                <div class="addres">   
+                    <p>Vinhedo Chamber of Commerce</p>
+                    <p>Rua Humberto Pescarini, 319 - Centro - Vinhedo - SP</p>
+                    <p>comercial@acivi.com.br</p>
+                    <p>+55 19 5627-7850</p>
+                </div>
 
-            </article>
-        </main>
-        <footer>
-            <div id="addres">   
-                <p>Vinhedo Chamber of Commerce</p>
-                <p>Rua Humberto Pescarini, 319 - Centro - Vinhedo - SP</p>
-                <p>comercial@acivi.com.br</p>
-                <p>+55 19 5627-7850</p>
-            </div>
+                <section class="socialMedias">
+                    <a href="https://www.youtube.com" target="_blank" >
+                        <img src="images/youtube.png" alt="youtube">
+                    </a>
+                    <a href="https://www.x.com" target="_blank">
+                        <img src="images/twitter.png" alt="twitter/X">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="images/linkedin.png" alt="linkedIn">
+                    </a>
+                </section>
 
-            <section id="socialMedias">
-
-            </section>
-
-            <div class="infos">
-                <p>WDD231 Project</p>
-                <p>Kevin G. Ferreira</p>
-                <p><span class="copyright">&copy; <span id="currentYear"></span> Vinhedo Chamber of Commerce</span></p>
-                <p id="lastModified"></p>
-            </div>
-        </footer>
+                <div class="siteInfos">
+                    <p>WDD231 Project</p>
+                    <p>Kevin G. Ferreira</p>
+                    <p><span class="copyright">&copy; <span id="currentYear"></span> Vinhedo Chamber of Commerce</span></p>
+                    <p id="lastModified"></p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
