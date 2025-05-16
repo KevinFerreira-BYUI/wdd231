@@ -1,58 +1,60 @@
-[
-    {
-        "name": "Barn Lodge & Café",
-        "addres": "Rod. Edenor João Tasca, 7150 - Cachoeira, Vinhedo - SP, 13280-450",
-        "phone": "N/A",
-        "website": "https://www.barnlodgecafe.com.br/",
-        "image": "images/barnlodge.webp",
-        "membershipLevel": 3   
-    },
-    {
-        "name": "Adega do Portuga",
-        "addres": "R. Humberto Pescarini, 223 - Centro, Vinhedo - SP, 13280-082",
-        "phone": "(19) 3876-2452",
-        "website": "https://www.instagram.com/adegadoportuga/",
-        "image": "images/adegadoportuga.webp",
-        "membershipLevel": 3    
-    },
-       {
-        "name": "Santa Massa",
-        "addres": "R. Rosa Zanetti Ferragut, 160 - Distrito Industrial, Vinhedo - SP, 13280-000",
-        "phone": "(19) 3826-7900",
-        "website": "https://www.santamassa.com.br",
-        "image": "images/santamassa.png",
-        "membershipLevel": 3
-    },
-    {
-        "name": "Empório Grão Divino",
-        "addres": "Av. Independência, 3.678 - Jardim Alves Nogueira, Vinhedo - SP, 13280-000",
-        "phone": "(19) 3876-0407",
-        "website": "https://www.instagram.com/emporiograodivino21/",
-        "image": "images/graodivino.png",
-        "membershipLevel": 1
-    },
-    {
-        "name": "Thermas Water Park - Agência Vinhedo",
-        "addres": "Av. Benedito Storani, 230 - Vila Junqueira, Vinhedo - SP, 13280-000",
-        "phone": "(19) 3836-1860",
-        "website": "https://www.thermas.com.br",
-        "image": "images/thermas.webp",
-        "membershipLevel": 2
-    },
-    {
-        "name": "Pizzaria La Villa",
-        "addres": "Av. Independência, 5.238 - Jardim Bela Vista, Vinhedo - SP, 13280-000",
-        "phone": "(19) 99864-8486",
-        "website": "https://www.instagram.com/pizzaeesfihavillaromanavinhedo/",
-        "image": "images/lavilla.png",
-        "membershipLevel": 1
-    },
-    {
-        "name": "Sodiê Doces Vinhedo",
-        "addres": "Av. Independência, 3.680 - Jardim Alves Nogueira, Vinhedo - SP, 13280-000",
-        "phone": "(19) 3876-0605",
-        "website": "https://www.sodiedoces.com.br",
-        "image": "images/sodie.png",
-        "membershipLevel": 2
-    }
-]
+{
+    "members":[
+        {
+            "name": "Barn Lodge & Café",
+            "address": "Rod. Edenor João Tasca, 7150 - Cachoeira, Vinhedo - SP, 13280-450",
+            "phone": "N/A",
+            "website": "https://www.barnlodgecafe.com.br/",
+            "image": "images/barnlodge.webp",
+            "membershipLevel": 3   
+        },
+        {
+            "name": "Adega do Portuga",
+            "address": "R. Humberto Pescarini, 223 - Centro, Vinhedo - SP, 13280-082",
+            "phone": "(19) 3876-2452",
+            "website": "https://www.instagram.com/adegadoportuga/",
+            "image": "images/adegadoportuga.webp",
+            "membershipLevel": 3    
+        },
+        {
+            "name": "Santa Massa",
+            "address": "R. Rosa Zanetti Ferragut, 160 - Distrito Industrial, Vinhedo - SP, 13280-000",
+            "phone": "(19) 3826-7900",
+            "website": "https://www.santamassa.com.br",
+            "image": "images/santamassa.png",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Empório Grão Divino",
+            "address": "Av. Independência, 3.678 - Jardim Alves Nogueira, Vinhedo - SP, 13280-000",
+            "phone": "(19) 3876-0407",
+            "website": "https://www.instagram.com/emporiograodivino21/",
+            "image": "images/graodivino.png",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Thermas Water Park - Agência Vinhedo",
+            "address": "Av. Benedito Storani, 230 - Vila Junqueira, Vinhedo - SP, 13280-000",
+            "phone": "(19) 3836-1860",
+            "website": "https://www.thermas.com.br",
+            "image": "images/thermas.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Pizzaria La Villa",
+            "address": "Av. Independência, 5.238 - Jardim Bela Vista, Vinhedo - SP, 13280-000",
+            "phone": "(19) 99864-8486",
+            "website": "https://www.instagram.com/pizzaeesfihavillaromanavinhedo/",
+            "image": "images/lavilla.png",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Sodiê Doces Vinhedo",
+            "address": "Av. Independência, 3.680 - Jardim Alves Nogueira, Vinhedo - SP, 13280-000",
+            "phone": "(19) 3876-0605",
+            "website": "https://www.sodiedoces.com.br",
+            "image": "images/sodie.png",
+            "membershipLevel": 2
+        }
+    ]
+}
