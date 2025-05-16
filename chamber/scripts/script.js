@@ -20,8 +20,6 @@ const displayMembers = (members) => {
         let img = document.createElement("img");
         let membershipLevel = document.createElement("p");
 
-        content.setAttribute("class", "cardContent");
-
         img.setAttribute("src", member.image);
         img.setAttribute("alt", `Image of ${member.name}`);
         img.setAttribute("loading", "lazy");
@@ -68,9 +66,15 @@ gridBtn.addEventListener("click", () => {
     
     display.classList.add("memberCard");
     display.classList.remove("list");
+
+    const contentDivs = document.querySelectorAll("section > div");
+    contentDivs.forEach(div => div.classList.remove("cardContent"));
 });
 
 listBtn.addEventListener("click", () => {
     display.classList.remove("memberCard");
     display.classList.add("list");
+
+    const contentDivs = document.querySelectorAll("section > div");
+    contentDivs.forEach(div => div.classList.add("cardContent"));
 });

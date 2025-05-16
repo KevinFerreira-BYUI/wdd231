@@ -190,11 +190,21 @@ div.memberCard{
   padding: 0.25rem;
 }
 
+.list div:nth-child(odd){
+  background-color: var(--color1);
+}
+
+.list div:nth-child(even){
+  background-color: var(--color2);
+}
+
 .list img{
   display: none;
 }
 
 div.cardContent{
-  background-color: var(--color6);
+  background-color: var(--color1);
   gap: 1rem;
 }
+
+
