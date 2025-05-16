@@ -12,12 +12,15 @@ async function getMember(){
 const displayMembers = (members) => {
     members.forEach((member) => {
         let card = document.createElement("section");
+        let content = document.createElement("div");
         let name = document.createElement("h3");
         let address = document.createElement("p");
         let phone = document.createElement("p");
         let website = document.createElement("a");
         let img = document.createElement("img");
         let membershipLevel = document.createElement("p");
+
+        content.setAttribute("class", "cardContent");
 
         img.setAttribute("src", member.image);
         img.setAttribute("alt", `Image of ${member.name}`);
@@ -27,30 +30,47 @@ const displayMembers = (members) => {
         img.setAttribute("class", "memberImg")
 
         name.setAttribute("class", "memberName");
-        name.textContent = `Member name: ${member.name}`;
+        name.textContent = `${member.name}`;
 
         address.setAttribute("class", "memberAddress");
-        address.textContent = `Address: ${member.address}`;
+        address.innerHTML = `<strong>Address:</strong> ${member.address}`;
 
         phone.setAttribute("class", "memberPhone");
-        phone.textContent = `Phone number: ${member.phone}`;
+        phone.innerHTML = `<strong>Phone number:</strong> ${member.phone}`;
+
+        membershipLevel.setAttribute("class", "membershipLevel");
+        membershipLevel.innerHTML = `<strong>Membership Level:</strong> ${member.membershipLevel}`;
 
         website.setAttribute("href", member.website);
         website.setAttribute("target", "_blank");
-        website.textContent = "Visit Website";
+        website.textContent = "Visit the Website";
 
-        membershipLevel.setAttribute("class", "membershipLevel");
-        membershipLevel.textContent = `Membership Level: ${member.membershipLevel}`;
+        content.appendChild(name);
+        content.appendChild(address);
+        content.appendChild(phone);
+        content.appendChild(membershipLevel);
+        content.appendChild(website);
 
-        card.appendChild(name);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
-        card.appendChild(membershipLevel);
         card.appendChild(img);
-
+        card.appendChild(content);
+        
         memberCards.appendChild(card);
     });
 }
 
 getMember();
+
+const gridBtn = document.querySelector("#grid");
+const listBtn = document.querySelector("#list");
+const display = document.querySelector(".memberCard");
+
+gridBtn.addEventListener("click", () => {
+    
+    display.classList.add("memberCard");
+    display.classList.remove("list");
+});
+
+listBtn.addEventListener("click", () => {
+    display.classList.remove("memberCard");
+    display.classList.add("list");
+});
