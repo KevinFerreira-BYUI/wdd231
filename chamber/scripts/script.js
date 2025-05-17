@@ -84,6 +84,7 @@ const menuNav = document.querySelector(".menu");
 
 toggleBtn.addEventListener("click", () => {
     menuNav.classList.toggle("open");
+    toggleBtn.classList.toggle("open");
 });
 
 document.getElementById("currentYear").textContent = new Date().getFullYear(); 

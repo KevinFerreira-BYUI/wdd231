@@ -100,7 +100,7 @@ div.article-heading h1{
   background-color: var(--color6);
   margin: 80px auto 0 auto;
   padding: 30px;
-  width: 50%;
+  width: 500px;
   border-radius: 10px;
 }
 
@@ -117,8 +117,8 @@ div.buttons button{
   font-family: var(--text-font);
   font-weight: bolder;
   font-size: 2rem;
-  width: 200px;
-  padding: 5;
+  width: 250px;
+  padding: 5px;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -133,13 +133,32 @@ div.buttons button:active{
 footer{
     box-shadow: 0 -30px 25px rgba(0, 0, 0, 0.3);
     background-color: var(--color1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 60px;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 15px;
+.address{
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: start;
+  text-align: left;
+  margin: 15px;
+}
+
+.siteInfos{
+  grid-row: 1;
+  grid-column: 3;
+  justify-self: end;
+  text-align: right;
+  margin: 15px;
+}
+
+.socialMedias{
+  width: 200px;
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: center;
 }
 
 .socialMedias a{
@@ -173,6 +192,14 @@ div.memberCard{
   text-align: left;
 }
 
+.memberCard a{
+  color: var(--color3);
+}
+
+.memberCard a:hover{
+  color: var(--color2);
+}
+
 .memberCard img{
   width: 200px;
   height: 200px;
@@ -194,21 +221,19 @@ div.memberCard{
   padding: 0.25rem;
 }
 
-.list div:nth-child(odd){
-  background-color: var(--color1);
-}
-
-.list div:nth-child(even){
-  background-color: var(--color2);
-}
-
 .list img{
   display: none;
 }
 
 div.cardContent{
-  background-color: var(--color1);
+  background-color: var(--color6);
   gap: 1rem;
 }
 
+div.cardContent a{
+  color: var(--color3);
+}
 
+div.cardContent a:hover{
+  color: var(--color2);
+}
