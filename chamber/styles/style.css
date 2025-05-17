@@ -1,35 +1,32 @@
-:root{
-    --color1: #FFD60A;
-    --color2: #FFC300;
-    --color3: #003566;
-    --color4: #001D3D;
-    --color5: #000814;
-    --color6: #fff;
-
-    --text-font: "Roboto", sans-serif;
-    --heading-font: "Noto Sans", sans-serif;
-
-
+:root {
+  --color1: #FFD60A;
+  --color2: #FFC300;
+  --color3: #003566;
+  --color4: #001D3D;
+  --color5: #000814;
+  --color6: #fff;
+  --text-font: "Roboto", sans-serif;
+  --heading-font: "Noto Sans", sans-serif;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--text-font);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-font);
 }
 
-body{
-    background-color: var(--color3);
+body {
+  background-color: var(--color3);
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--color1);
-    padding: 10px 20px;
-    position: relative;
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color1);
+  padding: 10px 20px;
+  position: relative;
 }
 
 .logo-section {
@@ -45,9 +42,9 @@ body{
 }
 
 .title h1 {
-    font-family: var(--heading-font);
-    font-size: 1.1rem;
-    color: var(--color5);
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  color: var(--color5);
 }
 
 .title p {
@@ -74,12 +71,12 @@ body{
   text-align: center;
 }
 
-.menu a:hover{
+.menu a:hover {
   color: var(--color4);
   text-decoration: underline;
 }
 
-.menu a:active{
+.menu a:active {
   color: var(--color6);
 }
 
@@ -93,7 +90,7 @@ main {
   flex: 1;
 }
 
-div.article-heading h1{
+div.article-heading h1 {
   font-family: var(--heading-font);
   font-size: 2rem;
   text-align: center;
@@ -104,7 +101,7 @@ div.article-heading h1{
   border-radius: 10px;
 }
 
-div.buttons{  
+div.buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +109,7 @@ div.buttons{
   margin-top: 1rem;
 }
 
-div.buttons button{
+div.buttons button {
   background-color: var(--color1);
   font-family: var(--text-font);
   font-weight: bolder;
@@ -126,19 +123,19 @@ div.buttons button{
   transition: transform 0.1s ease;
 }
 
-div.buttons button:active{
+div.buttons button:active {
   transform: scale(0.98);
 }
 
-footer{
-    box-shadow: 0 -30px 25px rgba(0, 0, 0, 0.3);
-    background-color: var(--color1);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 60px;
+footer {
+  box-shadow: 0 -30px 25px rgba(0, 0, 0, 0.3);
+  background-color: var(--color1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 60px;
 }
 
-.address{
+.address {
   grid-row: 1;
   grid-column: 1;
   justify-self: start;
@@ -146,7 +143,7 @@ footer{
   margin: 15px;
 }
 
-.siteInfos{
+.siteInfos {
   grid-row: 1;
   grid-column: 3;
   justify-self: end;
@@ -154,25 +151,25 @@ footer{
   margin: 15px;
 }
 
-.socialMedias{
+.socialMedias {
   width: 200px;
   grid-row: 2;
   grid-column: 2;
   justify-self: center;
 }
 
-.socialMedias a{
+.socialMedias a {
   padding: 5px;
   text-decoration: none;
   display: inline-block;
 }
 
-.socialMedias img{
+.socialMedias img {
   width: 40px;
   height: auto;
 }
 
-div.memberCard{
+div.memberCard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
   gap: 1.5rem;
@@ -184,7 +181,7 @@ div.memberCard{
   color: var(--color5);
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -192,48 +189,47 @@ div.memberCard{
   text-align: left;
 }
 
-.memberCard a{
+.memberCard a {
   color: var(--color3);
 }
 
-.memberCard a:hover{
+.memberCard a:hover {
   color: var(--color2);
 }
 
-.memberCard img{
+.memberCard img {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.list{
+.list {
   display: flex;
   flex-direction: column;
   margin: 50px 40px 10px 40px;
-  
 }
 
-.list div{
+.list div {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
   margin: 0;
   padding: 0.25rem;
 }
 
-.list img{
+.list img {
   display: none;
 }
 
-div.cardContent{
+div.cardContent {
   background-color: var(--color6);
   gap: 1rem;
 }
 
-div.cardContent a{
+div.cardContent a {
   color: var(--color3);
 }
 
-div.cardContent a:hover{
+div.cardContent a:hover {
   color: var(--color2);
 }
