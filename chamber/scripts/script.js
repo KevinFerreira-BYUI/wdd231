@@ -78,3 +78,10 @@ listBtn.addEventListener("click", () => {
     const contentDivs = document.querySelectorAll("section > div");
     contentDivs.forEach(div => div.classList.add("cardContent"));
 });
+
+const toggleBtn = document.getElementById("menu-toggle");
+const menuNav = document.querySelector(".menu");
+
+toggleBtn.addEventListener("click", () => {
+    menuNav.classList.toggle("open");
+});
