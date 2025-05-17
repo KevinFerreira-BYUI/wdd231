@@ -19,8 +19,8 @@
     .hamburger {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 1.5rem;
+    top: 2.1rem;
+    right: 8rem;
   }
 
   .menu {
@@ -54,4 +54,26 @@
     position: relative;
     padding: 1.5rem 1rem 0.5rem;
   }
+}
+
+@media (max-width: 580px) {
+    div.memberCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .memberCard section{
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .memberCard img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
