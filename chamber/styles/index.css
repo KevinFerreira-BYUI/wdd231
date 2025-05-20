@@ -90,6 +90,23 @@ main {
   flex: 1;
 }
 
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
   box-shadow: 0 -30px 25px rgba(0, 0, 0, 0.3);
   background-color: var(--color1);

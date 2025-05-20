@@ -9,4 +9,3 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.classList.toggle("open");
 });
 
-
