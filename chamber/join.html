@@ -10,19 +10,19 @@
     <meta property="og:image" content="https://tribunadejundiai.com.br/wp-content/uploads/2020/02/WhatsApp-Image-2020-02-26-at-2.01.png">
     <meta property="og:url" content="https://kevinferreira-byui.github.io/wdd231/chamber">
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/directory-mobile.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <!-- <link rel="stylesheet" href="styles/index-mobile.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="scripts/directory.js" defer></script>
-    <title>Directory | Vinhedo Chamber of Commerce</title>
+    <script src="scripts/index.js" defer></script> <!-- CHANGE THE SCRIPT FILE WHEN CREATE IT -->
+    <title>Joing | Vinhedo Chamber of Commerce</title>
   </head>
   <body>
     <div class="wrapper">
       <header class="navbar">
         <div class="logo-section">
-          <img src="images/vinhedo-portal.webp" class="logo" alt="portal of vinhedo" width="300" height="250" loading="lazy">
+          <img src="images/vinhedo-portal.webp" class="logo" alt="portal of vinhedo" width="1919" height="1080" loading="lazy">
           <div class="title">
             <h1>Vinhedo</h1>
             <p>Chamber of Commerce</p>
@@ -32,21 +32,40 @@
       </header>
       <nav class="menu">
         <a href="index.html">Home</a>
-        <a href="#">Directory</a>
+        <a href="directory.html">Directory</a>
         <a href="#">Join</a>
         <a href="#">Discover</a>
       </nav>
       <main>
-        <div class="article-heading">
-          <h1>Members of our chamber</h1>
-          <div class="buttons">
-            <button id="grid">⏹️ Grid View</button>
-            <button id="list">📄 List View</button>
-          </div>
-        </div>
-        <article>
-          <div class="memberCard"></div>
-        </article>
+        <section class="form-container">
+            <fieldset>
+                <form action="#" method="post" class="form">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" required>
+
+                    <label for="email">Enterprise Email</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="phone">Enterprise Phone</label>
+                    <input type="tel" name="phone" id="phone" required>
+
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" name="cnpj" id="cnpj" required>
+
+                    <label for="companyType">Company Type</label>
+                    <select name="companyType" id="companyType" required>
+                      <option value="" disabled selected>Select a company type</option>
+                      <option value="item1">Information Technology Services</option>
+                      <option value="item2">Retail Trade</option>
+                      <option value="item3">Construction Industry</option>
+                      <option value="item4">Food Services</option>
+                      <option value="item5">Business Consulting and Advisory</option>
+                    </select>
+                    
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </fieldset>
+        </section>
       </main>
       <footer class="footer">
         <div class="address">
