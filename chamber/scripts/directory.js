@@ -1,12 +1,4 @@
-const jPath = "scripts/members.json";
-const memberCards = document.querySelector(".memberCard");
 
-async function getMember() {
-  const response = await fetch(jPath);
-  const data = await response.json();
-  console.table(data.members);
-  displayMembers(data.members);
-}
 
 const displayMembers = (members) => {
   members.forEach((member) => {
@@ -54,6 +46,16 @@ const displayMembers = (members) => {
     memberCards.appendChild(card);
   });
 };
+
+const jPath = "scripts/members.json";
+const memberCards = document.querySelector(".memberCard");
+
+async function getMember() {
+  const response = await fetch(jPath);
+  const data = await response.json();
+  console.table(data.members);
+  displayMembers(data.members);
+}
 
 getMember();
 
