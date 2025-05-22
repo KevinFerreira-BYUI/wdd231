@@ -9,16 +9,27 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.classList.toggle("open");
 });
 
+const weatherIcon = document.querySelector("#weather-icon");
+const currentInfos = document.querySelector("#weather-infos");
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=-23.03&lon=-46.97&units=metric&appid=bff1560d191c5bc6c0cc62775a0e100a`;
 
 
+async function apiFetch(){
+  try{
+    const response = await fetch(apiUrl);
+    if (response.ok){
+      const data = await response.json();
+      console.log(data)
+    }else {
+      throw Error(await response.text());
+    }
+  }catch (error){
+    console.log(error);
+  }
+}
 
+apiFetch();
 
-const jPath = "scripts/members.json";
-const memberCards = document.querySelector(".memberCard");
+function displayWeather(data){
 
-async function getMember() {
-  const response = await fetch(jPath);
-  const data = await response.json();
-  console.table(data.members);
-  displayMembers(data.members);
 }
