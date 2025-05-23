@@ -55,14 +55,8 @@ function displayWeather(data1, data2){
   height.innerHTML = `Heigh: ${data1.main.temp_max} &deg;C`;
   low.innerHTML = `Low: ${data1.main.temp_min} &deg;C`;
   humidity.innerHTML = `Humidity: ${data1.main.humidity}%`;
-  const sunriseTime = new Date(data1.sys.sunrise * 1000).toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit"
-  });
-  const sunsetTime = new Date(data1.sys.sunset * 1000).toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit"
-  });
+  const sunriseTime = new Date(data1.sys.sunrise * 1000).toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"});
+  const sunsetTime = new Date(data1.sys.sunset * 1000).toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"});
   sunrise.innerHTML = `Sunrise: ${sunriseTime}`;
   sunset.innerHTML = `Sunset: ${sunsetTime}`;
 }
