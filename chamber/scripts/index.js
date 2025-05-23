@@ -19,8 +19,6 @@ async function apiFetch(){
     if (response1.ok && response2.ok){
       const data1 = await response1.json();
       const data2 = await response2.json();
-      console.log(data1)
-      console.log(data2);
       displayWeather(data1);
       displayForecast(data2);
     }else {
