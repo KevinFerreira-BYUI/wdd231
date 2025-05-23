@@ -194,6 +194,18 @@ main {
   border-top-right-radius: 5px;
 }
 
+.currentWeather{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.currentWeather.weather-icon{
+  grid-column: 1/2;
+}
+
+/* .weatherForecast{
+
+} */
 
 footer {
   box-shadow: 0 -30px 25px rgba(0, 0, 0, 0.3);
