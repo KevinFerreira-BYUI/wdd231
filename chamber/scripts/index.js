@@ -9,8 +9,8 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.classList.toggle("open");
 });
 
-const apiCurrentWeather = `https://api.openweathermap.org/data/2.5/weather?lat=-23.03&lon=-46.97&units=metric&appid=bff1560d191c5bc6c0cc62775a0e100a`;
-const apiForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=-23.03&lon=-46.97&units=metric&appid=bff1560d191c5bc6c0cc62775a0e100a`;
+const apiCurrentWeather = `https://api.openweathermap.org/data/2.5/weather?lat=-23.03&lon=-46.98&units=metric&appid=bff1560d191c5bc6c0cc62775a0e100a`;
+const apiForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=-23.03&lon=-46.98&units=metric&appid=bff1560d191c5bc6c0cc62775a0e100a`;
 
 async function apiFetch(){
   try{
@@ -22,6 +22,7 @@ async function apiFetch(){
       console.log(data1)
       console.log(data2);
       displayWeather(data1);
+      displayForecast(data2);
     }else {
       const text1 = await response1.text();
       const text2 = await response2.text();
@@ -48,7 +49,7 @@ const tomorrow = document.querySelector(".tomorrow");
 const afterTomorrow = document.querySelector(".after-tomorrow");
 
 
-function displayWeather(data1, data2){
+function displayWeather(data1){
   weatherIcon.src = `https://openweathermap.org/img/wn/${data1.weather[0].icon}@2x.png`;
   degres.innerHTML = `<strong>${data1.main.temp} &deg;C</strong>`;
   desc.innerHTML = `${data1.weather[0].description}`;
@@ -60,3 +61,75 @@ function displayWeather(data1, data2){
   sunrise.innerHTML = `Sunrise: ${sunriseTime}`;
   sunset.innerHTML = `Sunset: ${sunsetTime}`;
 }
+
+function displayForecast(data2){
+  const forecasts = [];
+  const todayDate = new Date();
+
+  for (let i = 0; i < 3; i++){
+    const date = new Date(todayDate);
+    date.setDate(todayDate.getDate() + i);
+    const formartedDate = date.toISOString().split("T")[0];
+
+    const forecast = data2.list.find(item => item.dt_txt === `${formartedDate} 15:00:00`);
+    forecasts.push(forecast);
+  }
+
+    today.innerHTML = `<strong>Today: </strong>${Math.round(forecasts[0].main.temp)} &deg;C`
+
+    const dayTomorrow = new Date(forecasts[1].dt_txt).toLocaleDateString("en-US", {weekday:"long"});
+    tomorrow.innerHTML = `<strong>${dayTomorrow}: </strong>${Math.round(forecasts[1].main.temp)} &deg;C`;
+
+    const dayAfterTomorrow = new Date(forecasts[2].dt_txt).toLocaleDateString("en-US", {weekday:"long"});
+    afterTomorrow.innerHTML = `<strong>${dayAfterTomorrow}: </strong>${Math.round(forecasts[2].main.temp)} &deg;C`;
+}
+
+async function loadRandomMembers() {
+  const response = await fetch("scripts/members.json");
+  const data = await response.json();
+
+  const filteredMembers = data.members.filter(m => m.membershipLevel === 2 || m.membershipLevel === 3);
+  const shuffled = filteredMembers.sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, 3);
+
+  const section = document.querySelector(".members-section > div");
+
+  selected.forEach(member => {
+    const card = document.createElement("section");
+    card.classList.add("member-highlight");
+
+    const img = document.createElement("img");
+    img.src = member.image;
+    img.alt = `Logo of ${member.name}`;
+    img.loading = "lazy";
+
+    const info = document.createElement("div");
+    info.classList.add("member-info");
+
+    const name = document.createElement("h3");
+    name.textContent = member.name;
+
+    const tagline = document.createElement("p");
+    tagline.textContent = member.tagline || "Business Tag Line";
+
+    const email = document.createElement("p");
+    email.innerHTML = `<strong>EMAIL:</strong> ${member.email}`;
+
+    const phone = document.createElement("p");
+    phone.innerHTML = `<strong>PHONE:</strong> ${member.phone}`;
+
+    const website = document.createElement("a");
+    website.href = member.website;
+    website.target = "_blank";
+    website.textContent = "Visit Website";
+    website.classList.add("visit-link");
+
+    info.append(name, tagline, email, phone, website);
+    card.append(img, info);
+    section.appendChild(card);
+  });
+}
+
+loadRandomMembers();
+
+

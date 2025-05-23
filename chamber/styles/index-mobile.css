@@ -105,6 +105,15 @@
   button#menu-toggle.hamburger {
     right: 4rem;
   }
+
+  .hero-text h1{
+    font-size: 2rem;
+  }
+
+  .hero-text p{
+    font-size: 1rem;
+  }
+
 }
 
 @media (max-width: 460px) {
@@ -113,8 +122,36 @@
   }
 }
 
+@media (max-width: 440px){
+  .hero-text{
+    padding: 1rem 2rem;
+  }
+
+  .hero-text h1{
+    font-size: 30px;
+  }
+
+  .hero-text p{
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 415px) {
   button#menu-toggle.hamburger {
     right: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-text{
+    padding: 10px 1rem;
+  }
+
+  .hero-text h1{
+    font-size: 30px;
+  }
+
+  .hero-text p{
+    font-size: 15px;
   }
 }

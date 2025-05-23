@@ -199,13 +199,99 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
+p.degres,
+p.description,
+p.height,
+p.low,
+p.humidity,
+p.sunrise,
+p.sunset{
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
 .currentWeather.weather-icon{
   grid-column: 1/2;
 }
 
-/* .weatherForecast{
+.weatherForecast{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 130px;
+  margin-top: 15px;
+}
 
-} */
+.weatherForecast p{
+  font-size: 1.2rem;
+}
+
+.members-section > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.member-highlight {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  width: 420px; 
+  min-height: 160px;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.member-highlight img {
+  width: 100px; 
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #aaa;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.member-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.member-info p {
+  margin: 0.25rem 0;
+}
+
+.member-info a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.member-info a:hover {
+  text-decoration: underline;
+}
+
+.visit-link {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--color3);
+  text-decoration: none;
+}
+
+.visit-link:hover {
+  text-decoration: underline;
+}
 
 footer {
   box-shadow: 0 -30px 25px rgba(0, 0, 0, 0.3);
