@@ -89,3 +89,15 @@ toggleBtn.addEventListener("click", () => {
 
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+
+window.addEventListener("load", () => {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll(".menu a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPath || (currentPath === "" && href === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+});

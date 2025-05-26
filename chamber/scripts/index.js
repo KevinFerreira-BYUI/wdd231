@@ -21,6 +21,7 @@ async function apiFetch(){
       const data2 = await response2.json();
       displayWeather(data1);
       displayForecast(data2);
+      console.log(data2);
     }else {
       const text1 = await response1.text();
       const text2 = await response2.text();
@@ -49,10 +50,10 @@ const afterTomorrow = document.querySelector(".after-tomorrow");
 
 function displayWeather(data1){
   weatherIcon.src = `https://openweathermap.org/img/wn/${data1.weather[0].icon}@2x.png`;
-  degres.innerHTML = `<strong>${data1.main.temp} &deg;C</strong>`;
+  degres.innerHTML = `<strong>${Math.round(data1.main.temp)} &deg;C</strong>`;
   desc.innerHTML = `${data1.weather[0].description}`;
-  height.innerHTML = `Heigh: ${data1.main.temp_max} &deg;C`;
-  low.innerHTML = `Low: ${data1.main.temp_min} &deg;C`;
+  height.innerHTML = `Heigh: ${Math.round(data1.main.temp_max)} &deg;C`;
+  low.innerHTML = `Low: ${Math.round(data1.main.temp_min)} &deg;C`;
   humidity.innerHTML = `Humidity: ${data1.main.humidity}%`;
   const sunriseTime = new Date(data1.sys.sunrise * 1000).toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"});
   const sunsetTime = new Date(data1.sys.sunset * 1000).toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"});
@@ -60,26 +61,41 @@ function displayWeather(data1){
   sunset.innerHTML = `Sunset: ${sunsetTime}`;
 }
 
-function displayForecast(data2){
+function displayForecast(data) {
   const forecasts = [];
-  const todayDate = new Date();
+  const currentDate = new Date();
+  const validHours = [
+    "15:00:00", "12:00:00", "18:00:00", "09:00:00", "21:00:00", "06:00:00", "03:00:00", "00:00:00"
+  ];
 
-  for (let i = 0; i < 3; i++){
-    const date = new Date(todayDate);
-    date.setDate(todayDate.getDate() + i);
-    const formartedDate = date.toISOString().split("T")[0];
+  for (let i = 0; i < 3; i++) {
+    const date = new Date(currentDate);
+    date.setDate(currentDate.getDate() + i);
+    const dateStr = date.toISOString().split("T")[0];
 
-    const forecast = data2.list.find(item => item.dt_txt === `${formartedDate} 15:00:00`);
+    let forecast = null;
+
+    for (const hour of validHours) {
+      forecast = data.list.find(item => item.dt_txt === `${dateStr} ${hour}`);
+      if (forecast) break;
+    }
+
     forecasts.push(forecast);
   }
 
-    today.innerHTML = `<strong>Today: </strong>${Math.round(forecasts[0].main.temp)} &deg;C`
+  if (forecasts[0]) {
+    today.innerHTML = `<strong>Today: </strong>${Math.round(forecasts[0].main.temp)} &deg;C`;
+  }
 
-    const dayTomorrow = new Date(forecasts[1].dt_txt).toLocaleDateString("en-US", {weekday:"long"});
-    tomorrow.innerHTML = `<strong>${dayTomorrow}: </strong>${Math.round(forecasts[1].main.temp)} &deg;C`;
+  if (forecasts[1]) {
+    const dayName = new Date(forecasts[1].dt_txt).toLocaleDateString("en-US", { weekday: "long" });
+    tomorrow.innerHTML = `<strong>${dayName}: </strong>${Math.round(forecasts[1].main.temp)} &deg;C`;
+  }
 
-    const dayAfterTomorrow = new Date(forecasts[2].dt_txt).toLocaleDateString("en-US", {weekday:"long"});
-    afterTomorrow.innerHTML = `<strong>${dayAfterTomorrow}: </strong>${Math.round(forecasts[2].main.temp)} &deg;C`;
+  if (forecasts[2]) {
+    const dayName = new Date(forecasts[2].dt_txt).toLocaleDateString("en-US", { weekday: "long" });
+    afterTomorrow.innerHTML = `<strong>${dayName}: </strong>${Math.round(forecasts[2].main.temp)} &deg;C`;
+  }
 }
 
 async function loadRandomMembers() {
@@ -129,5 +145,18 @@ async function loadRandomMembers() {
 }
 
 loadRandomMembers();
+
+
+window.addEventListener("load", () => {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll(".menu a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPath || (currentPath === "" && href === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+});
 
 

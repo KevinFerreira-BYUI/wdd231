@@ -71,9 +71,12 @@ body {
   text-align: center;
 }
 
+.menu a.active{
+  text-decoration: overline;
+}
+
 .menu a:hover {
-  color: var(--color4);
-  text-decoration: underline;
+  color: var(--color6);
 }
 
 .menu a:active {
