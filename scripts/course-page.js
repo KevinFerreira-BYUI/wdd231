@@ -1,26 +1,3 @@
-
-
-// hanmburguer menu
-    const hamburguer = document.getElementById("hambButton")
-    const closeBtn = document.getElementById("closeButton")
-    const nav = document.querySelector("nav.main-nav")
-
-    hamburguer.addEventListener("click", () => {
-        nav.classList.add("open");
-        hamburguer.classList.add("hambHidden");
-        closeBtn.classList.remove("closeHidden");
-    });
-
-    closeBtn.addEventListener("click" , () => {
-        nav.classList.remove("open");
-        hamburguer.classList.remove("hambHidden");
-        closeBtn.classList.add("closeHidden");
-    });
-
-// current date
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = `Last Modification ${document.lastModified}`;
-
 // all courses list
     const courses = [
     {
@@ -101,6 +78,28 @@
         completed: false
     }
 ]
+
+// hanmburguer menu
+    const hamburguer = document.getElementById("hambButton")
+    const closeBtn = document.getElementById("closeButton")
+    const nav = document.querySelector("nav.main-nav")
+
+    hamburguer.addEventListener("click", () => {
+        nav.classList.add("open");
+        hamburguer.classList.add("hambHidden");
+        closeBtn.classList.remove("closeHidden");
+    });
+
+    closeBtn.addEventListener("click" , () => {
+        nav.classList.remove("open");
+        hamburguer.classList.remove("hambHidden");
+        closeBtn.classList.add("closeHidden");
+    });
+
+// current date
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = `Last Modification ${document.lastModified}`;
+
     document.addEventListener("DOMContentLoaded", () => {
         const cards = document.querySelectorAll(".certificate-cards .card");
         const btnAll = document.querySelector(".filter-btn[data-filter='all']");
@@ -144,7 +143,6 @@
                 }
             });
         });
-
 
         const courseDetails = document.getElementById("course-details");
         function displayCourseDetails(course){
