@@ -25,6 +25,10 @@
           height="250"
         />
         <h1 class="site-title">Kevin G. Ferreira</h1>
+        <div class="icon-wrapper">
+          <img src="images/hamb-icon.png" id="hambButton" alt="menu icon" loading="lazy">
+          <img src="images/close-icon.png" id="closeButton" class="closeHidden" alt="close icon" loading="lazy">
+        </div>
       </div>
       <nav class="main-nav">
         <ul>
@@ -38,6 +42,7 @@
     </header>
 
     <main class="main-content">
+      <dialog id="course-details"></dialog>
       <section class="home-section">
         <h2>Home</h2>
         <div class="panels">
@@ -81,7 +86,9 @@
     <footer class="site-footer">
       <div class="footer-content">
         <p>
-          ©2025 ⚽ Kevin G. Ferreira ⚽ Brazil
+        <span 
+          class="copyright">&copy; <span id="currentYear"></span> ⚽ Kevin G. Ferreira ⚽ Brazil
+        </span>
           <img
             src="images/cbf-icon.png"
             alt="Icon of the Brazilian national football team"
@@ -90,8 +97,8 @@
             width="100"
             height="150"
           />
-        </p>
-        <span id="currentyear"></span>
+        </p><br>
+        <p id="lastModified"></p>        
       </div>
     </footer>
   </body>

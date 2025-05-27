@@ -113,6 +113,9 @@
                 cardElement.textContent = `✔ ${course.subject} ${course.number}`;
                 cardElement.style.backgroundColor = '#00EACE'; 
                 cardElement.style.color = '#000';  
+                cardElement.addEventListener("click", () => {
+                    displayCourseDetails(course);
+                });
             }
         });
 
@@ -141,4 +144,24 @@
                 }
             });
         });
+
+
+        const courseDetails = document.getElementById("course-details");
+        function displayCourseDetails(course){
+            courseDetails.innerHTML = "";
+            courseDetails.innerHTML = `
+                <button id="closeModal">✖</button>
+                <h2>${course.subject} ${course.number}</h2>
+                <h3>${course.title}</h3>
+                <p><strong>Credtis: </strong> ${course.credits}</p>
+                <p><strong>Certificate: </strong> ${course.certificate}</p>
+                <p>${course.description}</p>
+                <p><strong>Technologies: </strong> ${course.technology.join(",")}</p>
+                `;
+                const closeModal = document.getElementById("closeModal");
+                courseDetails.showModal();
+                closeModal.addEventListener("click", () => {
+                    courseDetails.close();
+                });
+        }
     });
