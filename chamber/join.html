@@ -11,11 +11,11 @@
     <meta property="og:url" content="https://kevinferreira-byui.github.io/wdd231/chamber">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/join.css">
-    <!-- <link rel="stylesheet" href="styles/index-mobile.css"> -->
+    <link rel="stylesheet" href="styles/join-mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="scripts/index.js" defer></script> <!-- CHANGE THE SCRIPT FILE WHEN CREATE IT -->
+    <script src="scripts/index.js" defer></script>
     <title>Joing | Vinhedo Chamber of Commerce</title>
   </head>
   <body>
@@ -37,35 +37,102 @@
         <a href="#">Discover</a>
       </nav>
       <main>
-        <section class="form-container">
-            <fieldset>
-                <form action="#" method="post" class="form">
-                    <label for="companyName">Company Name</label>
-                    <input type="text" id="companyName" required>
+       <section class="form-container">
+  <fieldset>
+    <form action="#" method="post" class="form">
+      <!-- First Name -->
+      <label for="firstName">Applicant's First Name</label>
+      <input 
+        type="text" 
+        id="firstName" 
+        name="first-name" 
+        title="Enter your first name" 
+        autocomplete="given-name" 
+        required>
 
-                    <label for="email">Enterprise Email</label>
-                    <input type="email" name="email" id="email" required>
+      <!-- Last Name -->
+      <label for="lastName">Applicant's Last Name</label>
+      <input 
+        type="text" 
+        id="lastName" 
+        name="last-name" 
+        title="Enter your last name" 
+        autocomplete="family-name" 
+        required>
 
-                    <label for="phone">Enterprise Phone</label>
-                    <input type="tel" name="phone" id="phone" required>
+      <!-- Organizational Title -->
+      <label for="orgTitle">Organizational Title</label>
+      <input 
+        type="text" 
+        id="orgTitle" 
+        name="organization-title" 
+        title="Enter your role in the organization" 
+        autocomplete="organization-title" 
+        pattern="[A-Za-z\s\-]{7,}" 
+        required>
 
-                    <label for="cnpj">CNPJ</label>
-                    <input type="text" name="cnpj" id="cnpj" required>
+      <!-- Email -->
+      <label for="email">Email Address</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        title="Enter your email address" 
+        autocomplete="email" 
+        placeholder="example@email.com" 
+        required>
 
-                    <label for="companyType">Company Type</label>
-                    <select name="companyType" id="companyType" required>
-                      <option value="" disabled selected>Select a company type</option>
-                      <option value="item1">Information Technology Services</option>
-                      <option value="item2">Retail Trade</option>
-                      <option value="item3">Construction Industry</option>
-                      <option value="item4">Food Services</option>
-                      <option value="item5">Business Consulting and Advisory</option>
-                    </select>
-                    
-                    <button type="submit">SUBMIT</button>
-                </form>
-            </fieldset>
-        </section>
+      <!-- Mobile Phone -->
+      <label for="mobile">Mobile Phone Number</label>
+      <input 
+        type="tel" 
+        id="mobile" 
+        name="mobile" 
+        title="Enter your mobile number" 
+        autocomplete="tel" 
+        required>
+
+      <!-- Organization Name -->
+      <label for="organization">Business/Organization Name</label>
+      <input 
+        type="text" 
+        id="organization" 
+        name="organization" 
+        title="Enter your organization name" 
+        autocomplete="organization" 
+        required>
+
+      <!-- Membership Level -->
+      <label for="membership">Membership Level</label>
+      <select id="membership" name="membership" title="Select your membership level" required>
+        <option value="" disabled selected>Select a membership level</option>
+        <option value="np">NP Membership</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
+      </select>
+
+      <!-- Description -->
+      <label for="description">Organization Description</label>
+      <textarea 
+        id="description" 
+        name="description" 
+        title="Describe your organization" 
+        rows="4"></textarea>
+
+      <!-- Timestamp -->
+      <input 
+        type="hidden" 
+        id="timestamp" 
+        name="timestamp" 
+        value="<?= date('Y-m-d\TH:i:s'); ?>">
+
+      <!-- Submit -->
+      <button type="submit">Submit</button>
+    </form>
+  </fieldset>
+</section>
+
       </main>
       <footer class="footer">
         <div class="address">
