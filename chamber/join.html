@@ -1,164 +1,141 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Chamber of Commerce of Vinhedo-Sp">
-    <meta name="author" content="Kevin G. Ferreira">
-    <meta property="og:title" content="Vinhedo Chamber of Commerce">
-    <meta property="og:description" content="A Chamber of Commerce of Vinhedo-Sp">
-    <meta property="og:image" content="https://tribunadejundiai.com.br/wp-content/uploads/2020/02/WhatsApp-Image-2020-02-26-at-2.01.png">
-    <meta property="og:url" content="https://kevinferreira-byui.github.io/wdd231/chamber">
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/join.css">
-    <link rel="stylesheet" href="styles/join-mobile.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="scripts/index.js" defer></script>
-    <title>Joing | Vinhedo Chamber of Commerce</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="navbar">
-        <div class="logo-section">
-          <img src="images/vinhedo-portal.webp" class="logo" alt="portal of vinhedo" width="1919" height="1080" loading="lazy">
-          <div class="title">
-            <h1>Vinhedo</h1>
-            <p>Chamber of Commerce</p>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A Chamber of Commerce of Vinhedo-Sp">
+		<meta name="author" content="Kevin G. Ferreira">
+		<meta property="og:title" content="Vinhedo Chamber of Commerce">
+		<meta property="og:description" content="A Chamber of Commerce of Vinhedo-Sp">
+		<meta property="og:image" content="https://tribunadejundiai.com.br/wp-content/uploads/2020/02/WhatsApp-Image-2020-02-26-at-2.01.png">
+		<meta property="og:url" content="https://kevinferreira-byui.github.io/wdd231/chamber">
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="styles/join.css">
+		<link rel="stylesheet" href="styles/join-mobile.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<script src="scripts/index.js" defer></script>
+		<title>Joing | Vinhedo Chamber of Commerce</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="navbar">
+				<div class="logo-section">
+					<img src="images/vinhedo-portal.webp" class="logo" alt="portal of vinhedo" width="1919" height="1080" loading="lazy">
+					<div class="title">
+						<h1>Vinhedo</h1>
+						<p>Chamber of Commerce</p>
+					</div>
+				</div>
+				<button id="menu-toggle" class="hamburger" aria-label="Abrir menu"></button>
+			</header>
+			<nav class="menu">
+				<a href="index.html">Home</a>
+				<a href="directory.html">Directory</a>
+				<a href="join.html">Join</a>
+				<a href="#">Discover</a>
+			</nav>
+			<main>
+				<section class="form-container">
+					<h1 class="form-heading">Membership Application Form</h1>
+					<fieldset>
+						<form action="#" method="post" class="form">
+							<!-- First Name -->
+							<label for="firstName">Applicant's First Name</label>
+							<input type="text" id="firstName" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+
+							<!-- Last Name -->
+							<label for="lastName">Applicant's Last Name</label>
+							<input type="text" id="lastName" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+
+							<!-- Organizational Title -->
+							<label for="orgTitle">Organizational Title</label>
+							<input type="text" id="orgTitle" name="organization-title" title="Enter your role in the organization" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+
+							<!-- Email -->
+							<label for="email">Email Address</label>
+							<input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+
+							<!-- Mobile Phone -->
+							<label for="mobile">Mobile Phone Number</label>
+							<input type="tel" id="mobile" name="mobile" title="Enter your mobile number" autocomplete="tel" required>
+
+							<!-- Organization Name -->
+							<label for="organization">Business/Organization Name</label>
+							<input type="text" id="organization" name="organization" title="Enter your organization name" autocomplete="organization" required>
+
+							<!-- Membership Level -->
+							<label for="membership">Membership Level</label>
+							<select id="membership" name="membership" title="Select your membership level" required>
+								<option value="" disabled selected>Select a membership level</option>
+								<option value="np">NP Membership</option>
+								<option value="bronze">Bronze Membership</option>
+								<option value="silver">Silver Membership</option>
+								<option value="gold">Gold Membership</option>
+							</select>
+
+							<!-- Description -->
+							<label for="description">Organization Description</label>
+							<textarea id="description" name="description" title="Describe your organization" rows="4"></textarea>
+
+							<!-- Timestamp -->
+							<input type="hidden" id="timestamp" name="timestamp" value="<?= date('Y-m-d\TH:i:s'); ?>">
+
+							<!-- Submit -->
+							<button type="submit">Submit</button>
+						</form>
+					</fieldset>
+				</section>
+        <section class="membership-container">
+          <div class="items">
+            <h1>Membership Levels</h1>
+            <div class="card-level">
+              <div class="nonLevel">
+                <h2>Non profit Membership Level</h2>
+                <button id="nonLevel">Learn more</button>
+              </div>
+              <div class="bronzeLevel">
+                <h2>Bronze Membership Level</h2>
+                <button id="bronzeLevel">Learn more</button>
+              </div>
+              <div class="silverLevel">
+                <h2>Silver Membership Level</h2>
+                <button id="silverLevel">Learn More</button>
+              </div>
+              <div class="goldLevel">
+                <h2>Gold Membership Level</h2>
+                <button id="goldLevel">Learn More</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <button id="menu-toggle" class="hamburger" aria-label="Abrir menu"></button>
-      </header>
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html">Join</a>
-        <a href="#">Discover</a>
-      </nav>
-      <main>
-       <section class="form-container">
-  <fieldset>
-    <form action="#" method="post" class="form">
-      <!-- First Name -->
-      <label for="firstName">Applicant's First Name</label>
-      <input 
-        type="text" 
-        id="firstName" 
-        name="first-name" 
-        title="Enter your first name" 
-        autocomplete="given-name" 
-        required>
-
-      <!-- Last Name -->
-      <label for="lastName">Applicant's Last Name</label>
-      <input 
-        type="text" 
-        id="lastName" 
-        name="last-name" 
-        title="Enter your last name" 
-        autocomplete="family-name" 
-        required>
-
-      <!-- Organizational Title -->
-      <label for="orgTitle">Organizational Title</label>
-      <input 
-        type="text" 
-        id="orgTitle" 
-        name="organization-title" 
-        title="Enter your role in the organization" 
-        autocomplete="organization-title" 
-        pattern="[A-Za-z\s\-]{7,}" 
-        required>
-
-      <!-- Email -->
-      <label for="email">Email Address</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        title="Enter your email address" 
-        autocomplete="email" 
-        placeholder="example@email.com" 
-        required>
-
-      <!-- Mobile Phone -->
-      <label for="mobile">Mobile Phone Number</label>
-      <input 
-        type="tel" 
-        id="mobile" 
-        name="mobile" 
-        title="Enter your mobile number" 
-        autocomplete="tel" 
-        required>
-
-      <!-- Organization Name -->
-      <label for="organization">Business/Organization Name</label>
-      <input 
-        type="text" 
-        id="organization" 
-        name="organization" 
-        title="Enter your organization name" 
-        autocomplete="organization" 
-        required>
-
-      <!-- Membership Level -->
-      <label for="membership">Membership Level</label>
-      <select id="membership" name="membership" title="Select your membership level" required>
-        <option value="" disabled selected>Select a membership level</option>
-        <option value="np">NP Membership</option>
-        <option value="bronze">Bronze Membership</option>
-        <option value="silver">Silver Membership</option>
-        <option value="gold">Gold Membership</option>
-      </select>
-
-      <!-- Description -->
-      <label for="description">Organization Description</label>
-      <textarea 
-        id="description" 
-        name="description" 
-        title="Describe your organization" 
-        rows="4"></textarea>
-
-      <!-- Timestamp -->
-      <input 
-        type="hidden" 
-        id="timestamp" 
-        name="timestamp" 
-        value="<?= date('Y-m-d\TH:i:s'); ?>">
-
-      <!-- Submit -->
-      <button type="submit">Submit</button>
-    </form>
-  </fieldset>
-</section>
-
-      </main>
-      <footer class="footer">
-        <div class="address">
-          <p>Vinhedo Chamber of Commerce</p>
-          <p>Rua Humberto Pescarini, 319 - Centro - Vinhedo - SP</p>
-          <p>comercial@acivi.com.br</p>
-          <p>+55 19 5627-7850</p>
-        </div>
-        <section class="socialMedias">
-          <a href="https://www.youtube.com" target="_blank">
-            <img src="images/youtube.png" alt="youtube">
-          </a>
-          <a href="https://www.x.com" target="_blank">
-            <img src="images/twitter.png" alt="twitter/X">
-          </a>
-          <a href="https://www.linkedin.com" target="_blank">
-            <img src="images/linkedin.png" alt="linkedIn">
-          </a>
         </section>
-        <div class="siteInfos">
-          <p>WDD231 Project</p>
-          <p>Kevin G. Ferreira</p>
-          <p><span class="copyright">&copy; <span id="currentYear"></span> Vinhedo Chamber of Commerce</span></p>
-          <p id="lastModified"></p>
-        </div>
-      </footer>
-    </div>
-  </body>
+			</main>
+			<footer class="footer">
+				<div class="address">
+					<p>Vinhedo Chamber of Commerce</p>
+					<p>Rua Humberto Pescarini, 319 - Centro - Vinhedo - SP</p>
+					<p>comercial@acivi.com.br</p>
+					<p>+55 19 5627-7850</p>
+				</div>
+				<section class="socialMedias">
+					<a href="https://www.youtube.com" target="_blank">
+						<img src="images/youtube.png" alt="youtube">
+					</a>
+					<a href="https://www.x.com" target="_blank">
+						<img src="images/twitter.png" alt="twitter/X">
+					</a>
+					<a href="https://www.linkedin.com" target="_blank">
+						<img src="images/linkedin.png" alt="linkedIn">
+					</a>
+				</section>
+				<div class="siteInfos">
+					<p>WDD231 Project</p>
+					<p>Kevin G. Ferreira</p>
+					<p><span class="copyright">&copy; <span id="currentYear"></span> Vinhedo Chamber of Commerce</span></p>
+					<p id="lastModified"></p>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
