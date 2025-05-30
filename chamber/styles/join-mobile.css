@@ -123,6 +123,20 @@
     min-height: 100px;
     max-height: 250px;
   }
+
+  dialog .modal-content h1.modal-heading {
+		font-size: 1.5rem;
+		padding: 0.5rem;
+	}
+
+	dialog .modal-content h2 {
+		font-size: 1.2rem;
+	}
+
+	dialog .modal-content p {
+		font-size: 1rem;
+	}
+
 }
 
 @media (max-width: 604px) {
@@ -162,7 +176,7 @@
   }
 }
 
-@media (max-width:510px) {
+@media (max-width: 510px) {
   div.items{
     display: flex;
     flex-direction: column;
@@ -194,6 +208,20 @@
     font-size: 0.9rem;
     padding: 0.6rem;
   }
+}
+
+@media (max-width: 480px) {
+	dialog .modal-content h1.modal-heading {
+		font-size: 1.2rem;
+	}
+
+	dialog .modal-content h2 {
+		font-size: 1rem;
+	}
+
+	dialog .modal-content p {
+		font-size: 0.9rem;
+	}
 }
 
 @media (max-width: 460px) {
