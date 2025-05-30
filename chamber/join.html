@@ -40,34 +40,34 @@
 				<section class="form-container">
 					<h1 class="form-heading">Membership Application Form</h1>
 					<fieldset>
-						<form action="#" method="post" class="form">
+						<form method="get" action="thankyou.html" class="form">
 							<!-- First Name -->
-							<label for="firstName">Applicant's First Name</label>
+							<label for="firstName">Applicant's First Name *</label>
 							<input type="text" id="firstName" name="first-name" title="Enter your first name" autocomplete="given-name" required>
 
 							<!-- Last Name -->
-							<label for="lastName">Applicant's Last Name</label>
+							<label for="lastName">Applicant's Last Name *</label>
 							<input type="text" id="lastName" name="last-name" title="Enter your last name" autocomplete="family-name" required>
 
 							<!-- Organizational Title -->
 							<label for="orgTitle">Organizational Title</label>
-							<input type="text" id="orgTitle" name="organization-title" title="Enter your role in the organization" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+							<input type="text" id="orgTitle" name="organization-title" title="Enter your role in the organization" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
 
 							<!-- Email -->
-							<label for="email">Email Address</label>
+							<label for="email">Email Address *</label>
 							<input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
 
 							<!-- Mobile Phone -->
-							<label for="mobile">Mobile Phone Number</label>
+							<label for="mobile">Mobile Phone Number *</label>
 							<input type="tel" id="mobile" name="mobile" title="Enter your mobile number" autocomplete="tel" required>
 
 							<!-- Organization Name -->
-							<label for="organization">Business/Organization Name</label>
+							<label for="organization">Business/Organization Name *</label>
 							<input type="text" id="organization" name="organization" title="Enter your organization name" autocomplete="organization" required>
 
 							<!-- Membership Level -->
 							<label for="membership">Membership Level</label>
-							<select id="membership" name="membership" title="Select your membership level" required>
+							<select id="membership" name="membership" title="Select your membership level">
 								<option value="" disabled selected>Select a membership level</option>
 								<option value="np">NP Membership</option>
 								<option value="bronze">Bronze Membership</option>
@@ -80,7 +80,7 @@
 							<textarea id="description" name="description" title="Describe your organization" rows="4"></textarea>
 
 							<!-- Timestamp -->
-							<input type="hidden" id="timestamp" name="timestamp" value="<?= date('Y-m-d\TH:i:s'); ?>">
+							<input type="hidden" id="timestamp" name="timestamp">
 
 							<!-- Submit -->
 							<button type="submit">Submit</button>

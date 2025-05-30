@@ -9,6 +9,18 @@ toggleBtn.addEventListener("click", () => {
 	toggleBtn.classList.toggle("open");
 });
 
+window.addEventListener("load", () => {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll(".menu a");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPath || (currentPath === "" && href === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+});
+
 const nonLevelModal = document.getElementById("nonLevelModal");
 function displayNonLevelModal(){
 	nonLevelModal.innerHTML = `
@@ -113,7 +125,20 @@ function displayGoldLevelModal(){
 	});
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const timestampInput = document.getElementById("timestamp");
+  if (timestampInput) {
+    const now = new Date().toISOString();
+    timestampInput.value = now;
+  }
+});
+
+
 displayNonLevelModal();
 displayBronzeLevelModal();
 displaySilverLevelModal();
 displayGoldLevelModal();
+
+
+
+// first name, last name, email, mobile number, business name, and current date timestamp from the hidden field
