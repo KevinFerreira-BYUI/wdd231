@@ -1,0 +1,52 @@
+{
+  "places": [
+    {
+      "name": "Jayme Ferragut Municipal Park",
+      "address": "Estrada da Boiada, s/n - Portal, Vinhedo - SP",
+      "description": "Green area with a lake, event stage, playground, and craft fair on weekends.",
+      "image": "images/parquejayme.webp"
+    },
+    {
+      "name": "Monastery of São Bento",
+      "address": "Rua Benedito Storani, 1115 - Caixa D’água, Vinhedo - SP",
+      "description": "Monastery with a shop selling handmade products by the monks and a peaceful meditation area.",
+      "image": "images/mosteiro.webp"
+    },
+    {
+      "name": "João Gasparini Reservoir",
+      "address": "Av. Aparecida Tellau Seraphim, Vinhedo - SP",
+      "description": "Reservoir with a walking track, gym equipment, and a panoramic viewpoint.",
+      "image": "images/represa.webp"
+    },
+    {
+      "name": "Sant’Ana Parish Church",
+      "address": "Praça Sant’Ana, Centro - Vinhedo - SP",
+      "description": "Historic 19th-century church with beautiful stained glass and colonial architecture.",
+      "image": "images/igrejamatriz.webp"
+    },
+    {
+      "name": "Vinhedo Portal",
+      "address": "Estrada da Boiada, s/n - Portal, Vinhedo - SP",
+      "description": "Symbolic entrance to the city with typical Italian architecture and a photo spot.",
+      "image": "images/portalvinhedo.webp"
+    },
+    {
+      "name": "Immigrant Memorial",
+      "address": "Rua Humberto Pescarini, 330 - Centro, Vinhedo - SP",
+      "description": "Space dedicated to the history of Italian immigrants with exhibitions and historical artifacts.",
+      "image": "images/memorial.webp"
+    },
+    {
+      "name": "Wine Festival",
+      "address": "Jayme Ferragut Municipal Park, Vinhedo - SP",
+      "description": "Traditional cultural event featuring artisanal wine, typical foods, and artistic performances.",
+      "image": "images/festivalvinho.webp"
+    },
+    {
+      "name": "Vinhedo Railway Station",
+      "address": "Av. Independência, 2000 - Vila Planalto, Vinhedo - SP",
+      "description": "Old railway station preserved as a cultural and tourist spot, with exhibitions and railway history.",
+      "image": "images/estacaovinhedo.webp"
+    }
+  ]
+}
