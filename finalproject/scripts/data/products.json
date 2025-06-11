@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "French Bread",
+    "description": "Crispy crust and soft inside, perfect for breakfast.",
+    "price": 2.50,
+    "img": ""
+  },
+  {
+    "id": 2,
+    "name": "Whole Wheat Bread",
+    "description": "Healthy and fiber-rich option for your meals.",
+    "price": 3.00,
+    "img": ""
+  },
+  {
+    "id": 3,
+    "name": "Butter Croissant",
+    "description": "Flaky and buttery, freshly baked every morning.",
+    "price": 2.20,
+    "img": ""
+  },
+  {
+    "id": 4,
+    "name": "Ham & Cheese Sandwich",
+    "description": "Classic sandwich with delicious ham and cheese.",
+    "price": 5.50,
+    "img": ""
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Donut",
+    "description": "Sweet and soft donut with chocolate glaze.",
+    "price": 1.80,
+    "img": ""
+  },
+  {
+    "id": 6,
+    "name": "Apple Juice",
+    "description": "Refreshing 100% natural apple juice.",
+    "price": 3.50,
+    "img": ""
+  },
+  {
+    "id": 7,
+    "name": "Orange Juice",
+    "description": "Freshly squeezed orange juice, no added sugar.",
+    "price": 3.50,
+    "img": ""
+  },
+  {
+    "id": 8,
+    "name": "Cheese Bread",
+    "description": "Small cheese-filled bread, a Brazilian favorite.",
+    "price": 4.00,
+    "img": ""
+  },
+  {
+    "id": 9,
+    "name": "Coca-Cola Can",
+    "description": "Ice-cold classic Coke in a can.",
+    "price": 2.00,
+    "img": ""
+  },
+  {
+    "id": 10,
+    "name": "Natural Yogurt",
+    "description": "Smooth and creamy plain yogurt.",
+    "price": 2.80,
+    "img": ""
+  },
+  {
+    "id": 11,
+    "name": "Cinnamon Roll",
+    "description": "Soft roll with sweet cinnamon and sugar.",
+    "price": 2.70,
+    "img": ""
+  },
+  {
+    "id": 12,
+    "name": "Butter Cookie",
+    "description": "Traditional buttery cookie, melts in your mouth.",
+    "price": 1.20,
+    "img": ""
+  },
+  {
+    "id": 13,
+    "name": "Espresso Coffee",
+    "description": "Strong and hot espresso, perfect to start the day.",
+    "price": 2.00,
+    "img": ""
+  },
+  {
+    "id": 14,
+    "name": "Milk Bread",
+    "description": "Soft and fluffy bread made with milk.",
+    "price": 2.80,
+    "img": ""
+  },
+  {
+    "id": 15,
+    "name": "Guava Juice",
+    "description": "Delicious tropical guava juice, rich in flavor.",
+    "price": 3.50,
+    "img": ""
+  }
+]
