@@ -13,7 +13,7 @@
         <meta property="og:type" content="website">
         <meta property="og:locale" content="en_US">
         <meta property="og:site_name" content="Hot Bread Bakery">
-        <link rel="icon" href="images/hotB-favicon.ico" type="image/x-icon" sizes="48x48">
+        <link rel="icon" href="images/hotB-favicon.ico" type="image/x-icon" sizes="80x80">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-large.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,16 +26,16 @@
         <header>
             <section class="header-section">
                 <div class="logo-container">
-                    <img class="logo" src="images/hot-bread-logo2.png" alt="mobile logo">
+                    <button class="hamb-button" id="hambBtn">☰</button>
+                    <button class="close-button hidden" id="closeBtn">X</button>
+                    <img class="logo" src="images/hot-bread-logo2.png" alt="mobile logo" loading="lazy">
                 </div>
-                <div class="nav-menu">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
+                <div class="nav-container hidden">
+                    <nav class="nav-menu">
+                        <a href="#">Home</a>
+                        <a href="#">Products</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact us</a>
                     </nav>
                 </div>
             </section>
