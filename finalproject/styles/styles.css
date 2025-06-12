@@ -1,9 +1,10 @@
 :root{
     --color1: #FFD60A;
     --color2: #FF8C00;
-    --color3: #8B4513;
+    --color3: #CD853F;
     --color4: #F5F5DC;
     --color6: #000000;
+    --color7: #FAFAD2;
 
     --head-font: "Cinzel", serif;
     --text-font: "Lato", sans-serif;
@@ -15,20 +16,21 @@
     box-sizing: border-box;
 }
 
+/* HEADER CONTENT */
+
 .header-section{
-    /* background-color: var(--color2); */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 150px 1fr;
 }
 
 .logo-container{
     background-color: var(--color1);
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
+    height: 150px;
 }
 
 .hamb-button, .close-button{
@@ -36,6 +38,10 @@
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo{
@@ -83,4 +89,91 @@
 .nav-menu.active {
     display: block;
     transform: translateY(0%);
+}
+
+
+/* MAIN CONTENT */
+
+main{
+    background-color: var(--color7);
+}
+
+.hero-container{
+    width: 100%;
+}
+
+.hero-image{
+    width: 100%;
+    height: auto;
+    
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-history,.card-products, .card-delivery{
+    background-color: var(--color3);
+    border-radius: 10px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    padding: 20px;
+}
+
+.card-history h1,.card-products h1, .card-delivery h1{
+    font-family: var(--head-font);
+    font-size: 1.2rem;
+}
+
+.card-history p,.card-products p, .card-delivery p{
+    font-family: var(--text-font);
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.products-button, .delivery-button{
+    background-color: var(--color7);
+    color: var(--color6);
+    font-family: var(--text-font);
+    font-size: 16px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.products-button:hover, .delivery-button:hover{
+    background-color: var(--color1);
+    transform: translateY(-4%);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* FOOTER CONTENT */
+
+footer{
+    padding: 0;
+    margin: 0;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    align-items: center;
+}
+
+.contact p{
+    font-family: var(--text-font);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+}
+
+.socialMedias img{
+    padding: 5px;
 }
