@@ -1,5 +1,13 @@
+import { displayModal } from "./modal.mjs";
+
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Current year and Last Modified
+    const date = new Date();
+    const currentYear = document.getElementById("currentYear").innerHTML = `${date.getFullYear()}`;
+    const lastModified = document.getElementById("lastModified").innerHTML = `Last Modified: ${document.lastModified}`;
+
+    // Menu button
     const hambBtn = document.getElementById("hambBtn");
     const closeBtn = document.getElementById("closeBtn");
     const navigation = document.querySelector(".nav-container")
@@ -16,5 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         closeBtn.classList.add("hidden");
         navigation.classList.add("hidden");
     });
+
+    // Display the modal
+    displayModal();
 
 });

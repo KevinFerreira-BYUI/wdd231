@@ -135,6 +135,47 @@ main{
     padding: 10px;
 }
 
+.products-modal{
+    background-color: var(--color7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 0 3rem #777;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+}
+
+::backdrop{
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.closeModalBtn-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding-bottom: 15px;
+}
+
+#closeModalBtn{
+    font-family: var(--text-font);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--color6);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#closeModalBtn:hover{
+    color: var(--color2);
+}
+
+
 .products-button, .delivery-button{
     background-color: var(--color7);
     color: var(--color6);
@@ -152,6 +193,12 @@ main{
     background-color: var(--color1);
     transform: translateY(-4%);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 350px) {
+    .card-history,.card-products, .card-delivery{
+        width: 300px;
+    }
 }
 
 /* FOOTER CONTENT */
@@ -176,4 +223,13 @@ footer{
 
 .socialMedias img{
     padding: 5px;
+    width: 35px;
 }
+
+.copyRights p{
+    font-family: var(--text-font);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+}
+
