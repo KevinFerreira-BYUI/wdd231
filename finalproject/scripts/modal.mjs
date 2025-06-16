@@ -9,7 +9,7 @@ export function displayModal(){
         <div class="modal-opened">
             <h1>a brief list of our products</h1>
             <div class="productList">
-                <h2>Test</h2>
+                
             </div>
         </div>
     `;

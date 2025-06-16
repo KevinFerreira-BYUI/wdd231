@@ -1,0 +1,38 @@
+
+@media (min-width: 1120px){
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-items: center;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .hamb-button, .close-button{
+        display: none;
+    }
+
+    .logo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-menu{
+        display: inline-block;
+    }
+
+    .hiddenMenu{
+        display: block;
+    }
+
+    img.hero-image{
+        height: 450px;
+    }
+}
