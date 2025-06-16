@@ -2,91 +2,91 @@
   {
     "id": 1,
     "name": "French Bread",
-    "price": 2.50,
-    "img": "products_images/french-bread.webp"
+    "price": "2.50",
+    "img": "scripts/data/products_images/french-bread.webp"
   },
   {
     "id": 2,
     "name": "Whole Wheat Bread",
-    "price": 3.00,
-    "img": "products_images/Whole-Wheat-Bread.webp"
+    "price": "3.00",
+    "img": "scripts/data/products_images/Whole-Wheat-Bread.webp"
   },
   {
     "id": 3,
     "name": "Butter Croissant",
-    "price": 2.20,
-    "img": "products_images/ButterCroissant.webp"
+    "price": "2.20",
+    "img": "scripts/data/products_images/ButterCroissant.webp"
   },
   {
     "id": 4,
     "name": "Ham & Cheese Sandwich",
-    "price": 5.50,
-    "img": "products_images/Ham-&-Cheese Sandwich.webp"
+    "price": "5.50",
+    "img": "scripts/data/products_images/Ham-&-Cheese Sandwich.webp"
   },
   {
     "id": 5,
     "name": "Chocolate Donut",
-    "price": 1.80,
-    "img": "products_images/Chocolate-Donut.webp"
+    "price": "1.80",
+    "img": "scripts/data/products_images/Chocolate-Donut.webp"
   },
   {
     "id": 6,
     "name": "Apple Juice",
-    "price": 3.50,
-    "img": "products_images/Apple-Juice.webp"
+    "price": "3.50",
+    "img": "scripts/data/products_images/Apple-Juice.webp"
   },
   {
     "id": 7,
     "name": "Orange Juice",
-    "price": 3.50,
-    "img": "products_images/Orange-Juice.jpeg"
+    "price": "3.50",
+    "img": "scripts/data/products_images/Orange-Juice.jpeg"
   },
   {
     "id": 8,
     "name": "Cheese Bread",
-    "price": 4.00,
-    "img": "products_images/Cheese-Bread.webp"
+    "price": "4.00",
+    "img": "scripts/data/products_images/Cheese-Bread.webp"
   },
   {
     "id": 9,
     "name": "Coca-Cola Can",
     "price": 2.00,
-    "img": "products_images/Colca-cola-can.webp"
+    "img": "scripts/data/products_images/Colca-cola-can.webp"
   },
   {
     "id": 10,
     "name": "Natural Yogurt",
-    "price": 2.80,
-    "img": "products_images/Natural-Yogurt.jpeg"
+    "price": "2.80",
+    "img": "scripts/data/products_images/Natural-Yogurt.jpeg"
   },
   {
     "id": 11,
     "name": "Cinnamon Roll",
-    "price": 2.70,
-    "img": "products_images/Cinnamon-Roll.webp"
+    "price": "2.70",
+    "img": "scripts/data/products_images/Cinnamon-Roll.webp"
   },
   {
     "id": 12,
     "name": "Butter Cookie",
-    "price": 1.20,
-    "img": "products_images/Butter-Cookie.jpg"
+    "price": "1.20",
+    "img": "scripts/data/products_images/Butter-Cookie.jpg"
   },
   {
     "id": 13,
     "name": "Ice Tea",
-    "price": 2.00,
-    "img": "products_images/Ice-Tea.webp"
+    "price": "2.00",
+    "img": "scripts/data/products_images/Ice-Tea.webp"
   },
   {
     "id": 14,
     "name": "Milk Bread",
-    "price": 2.80,
-    "img": "products_images/Milk-Bread.webp"
+    "price": "2.80",
+    "img": "scripts/data/products_images/Milk-Bread.webp"
   },
   {
     "id": 15,
     "name": "Guava Juice",
-    "price": 3.50,
-    "img": "products_images/Guava-Juice.webp"
+    "price": "3.50",
+    "img": "scripts/data/products_images/Guava-Juice.webp"
   }
 ]

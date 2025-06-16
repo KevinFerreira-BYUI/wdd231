@@ -1,6 +1,5 @@
 import { displayModal } from "./modal.mjs";
-import { displayProductsIndex } from "./fetchProducts.mjs";
-import { displayProducts } from "./fetchProducts.mjs";
+import { displayProductsIndex, displayProducts } from "./fetchProducts.mjs";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -28,26 +27,31 @@ document.addEventListener("DOMContentLoaded", () => {
         navigation.classList.add("hiddenMenu");
     });
 
+    // Wayfiding
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const navLink = document.querySelectorAll(".nav-menu a");
+    navLink.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPath){
+            link.classList.add("wayfind");
+        }
+    });
+
     // Display modal
-    displayModal();
+    if(document.getElementById("productModal")){
+        displayModal();
+    }
 
     // Display products in the modal
-    displayProductsIndex();
+    if (document.querySelector(".productList")){
+        displayProductsIndex();
+    }
 
     // Display products in the products.html
-    displayProducts();
+    if (document.querySelector(".products-list-container")){
+        displayProducts();
+    }
 });
 
 
 
-// window.addEventListener("load", () => {
-//   const currentPath = window.location.pathname.split("/").pop() || "index.html";
-//   const navLinks = document.querySelectorAll(".menu a");
-
-//   navLinks.forEach(link => {
-//     const href = link.getAttribute("href");
-//     if (href === currentPath || (currentPath === "" && href === "index.html")) {
-//       link.classList.add("active");
-//     }
-//   });
-// });

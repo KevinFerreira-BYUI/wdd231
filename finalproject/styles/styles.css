@@ -77,6 +77,15 @@
     transition: background-color 0.3s ease;
 }
 
+.nav-menu a.wayfind{
+    background-color: var(--color7);
+    font-weight: bolder;
+}
+
+.nav-menu a.wayfind:hover{
+    color: var(--color2);
+}
+
 .nav-menu a:hover{
     text-decoration: underline;
     color: var(--color4);
@@ -112,7 +121,7 @@ main{
     
 }
 
-.cards-container{
+.cards-container, .history-card-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,7 +129,7 @@ main{
     padding: 20px;
 }
 
-.card-history,.card-products, .card-delivery{
+.card-history,.card-products, .card-delivery, .history-card-container{
     background-color: var(--color3);
     border-radius: 10px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
@@ -128,12 +137,12 @@ main{
     padding: 20px;
 }
 
-.card-history h1,.card-products h1, .card-delivery h1{
+.card-history h1,.card-products h1, .card-delivery h1, .history-card-container h1{
     font-family: var(--head-font);
     font-size: 1.2rem;
 }
 
-.card-history p,.card-products p, .card-delivery p{
+.card-history p,.card-products p, .card-delivery p, .history-card-container p{
     font-family: var(--text-font);
     font-size: 1rem;
     padding: 10px;
@@ -199,13 +208,6 @@ main{
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 350px) {
-    .card-history,.card-products, .card-delivery{
-        width: 300px;
-    }
-}
-
-
 .products-container{
     width: 100%;
 }
@@ -226,10 +228,11 @@ main{
 }
 
 .products-list-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: center;
+    margin: 25px 25px;
+    gap: 30px;
 }
 
 .products-list-cards{
@@ -237,7 +240,8 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 310px;
+    width: 340px;
+    height: 180px;
     padding: 15px;
     border-radius: 10px;
 }
@@ -262,10 +266,54 @@ main{
 
 .prodImg{
     width: 200px;
+    height: 150px;
     grid-column-start: 2;
     grid-row: 1/4;
     border-radius: 10px;
     margin-left: 10px;
+}
+
+.history-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 25px;
+    gap: 25px;
+}
+
+.img-random-bakery{
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0.6, 0.6, 0.6, 0.6);
+}
+
+@media (max-width: 360px) {
+    .products-list-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .card-history,.card-products, .card-delivery{
+        width: 300px;
+    }
+
+    .history-card-container{
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px){
+    .products-list-cards{
+        width: 310px;
+    }
+
+    .prodImg{
+        width: 150px;
+        height: 150px;
+    }
 }
 
 /* FOOTER CONTENT */

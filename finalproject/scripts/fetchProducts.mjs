@@ -9,11 +9,14 @@ export async function displayProductsIndex(){
         }
         const products = await response.json();
         const modalIndex = document.querySelector(".productList");
-        products.forEach(products => {
-            const p = document.createElement("p");
-            p.innerHTML = `${products.name} $${products.price}`;
-            modalIndex.appendChild(p);
-        });
+
+        if (modalIndex){
+            products.forEach(products => {
+                const p = document.createElement("p");
+                p.innerHTML = `${products.name} $${products.price}`;
+                modalIndex.appendChild(p);
+            });
+        }
     } catch(error){
         console.error("Error!")
     }
@@ -30,7 +33,7 @@ export async function displayProducts(){
         const products = await response.json();
         const prodList = document.querySelector(".products-list-container");
         products.forEach(products => {
-            prodList.innerHTML = `
+            prodList.innerHTML += `
                 <div class="products-list-cards">
                     <h1 class="prodH1">${products.name}</h1>
                     <p class="priP">$ ${products.price}</p>
@@ -41,5 +44,4 @@ export async function displayProducts(){
     } catch(error){
         console.error("Error!")
     }
-
 }

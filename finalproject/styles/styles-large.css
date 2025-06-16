@@ -35,4 +35,29 @@
     img.hero-image{
         height: 450px;
     }
+
+    .history-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .history-card-container{
+        width: 700px;
+        height: 700px;
+    }
+
+    .history-card-container h1{
+        font-size: 1.5rem;
+    }
+
+    .history-card-container p{
+        font-size: 1.2rem;
+    }
+
+    .img-random-bakery{
+        width: 600px;
+    }
+
+
 }
