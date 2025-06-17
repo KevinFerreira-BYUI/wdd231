@@ -504,3 +504,13 @@ footer{
     padding: 5px;
 }
 
+.youtubeVideo{
+    color: var(--color6);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.youtubeVideo:hover{
+    color: var(--color7);
+    background-color: var(--color6);
+}
