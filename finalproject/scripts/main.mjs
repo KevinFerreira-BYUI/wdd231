@@ -1,5 +1,6 @@
 import { displayModal } from "./modal.mjs";
 import { displayProductsIndex, displayProducts } from "./fetchProducts.mjs";
+import { displayLocalStorage } from "./localStorage.mjs";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -50,6 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Display products in the products.html
     if (document.querySelector(".products-list-container")){
         displayProducts();
+    }
+
+    // Display local storage in thanks.html
+    if (document.querySelector(".local-storage")){
+        displayLocalStorage();
     }
 });
 

@@ -37,7 +37,7 @@ export async function displayProducts(){
                 <div class="products-list-cards">
                     <h1 class="prodH1">${products.name}</h1>
                     <p class="priP">$ ${products.price}</p>
-                    <img class="prodImg" src="${products.img}" alt="${products.name} img">
+                    <img class="prodImg" src="${products.img}" alt="${products.name} img" loading="lazy">
                 </div>  
             `;
         });
